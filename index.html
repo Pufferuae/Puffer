@@ -1,0 +1,436 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Puffer</title>
+    <link rel="shortcut icon" href="./images/logo2.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        /* Enable smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Standardizing card dimensions */
+        .feature-card {
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 12px;
+        }
+
+        /* Reduced margin between Features and Variants */
+        #features {
+            padding-bottom: 40px;
+        }
+
+        #variants {
+            padding-top: 40px;
+        }
+
+        /* Styling for Variant descriptions */
+        .variant-description {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 16px;
+            color: #444;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .feature-title{
+            font-weight: 700;
+        }
+        /* Enable smooth scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
+        /* Standardizing card dimensions */
+        .feature-card {
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 12px;
+        }
+
+        /* Reduced margin between Features and Variants */
+        #features {
+            padding-bottom: 40px;
+        }
+
+        #variants {
+            padding-top: 40px;
+        }
+
+        /* Styling for Variant descriptions */
+        .variant-description {
+            text-align: center;
+            margin-top: 15px;
+            font-size: 16px;
+            color: #444;
+            max-width: 500px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .feature-title{
+            font-weight: 700;
+        }
+
+        .gallery-item img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+        /* Improved responsiveness for Contact section */
+        @media (max-width: 768px) {
+            #contact .row {
+                flex-direction: column-reverse;
+            }
+
+            #contact .col-lg-5, #contact .col-lg-7 {
+                width: 100%;
+            }
+
+            #contact iframe {
+                width: 100% !important;
+                height: 600px !important;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+        <div class="container-fluid" id>
+            <a class="navbar-brand" href="#">PUFFER</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#variants">Variants</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#demo">Demo</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="position-relative overflow-hidden d-flex align-items-center justify-content-center text-center vh-100" 
+         style="background: url('./images/cp2.webp') no-repeat center center/cover; width: 100vw;" id="home">
+        <div class="col-md-6 p-lg-5">
+            <h1 class="display-3 fw-bold text-white">PUFFER.</h1>
+            <h3 class="fw-normal text-light mb-3">Where the air tells a story</h3>
+        </div>
+    </div>
+
+    <!-- Features Section -->
+    <div class="container px-4 py-4" id="features">
+        <h2 class="pb-2 border-bottom">Features</h2>
+        <div class="row row-cols-1 row-cols-lg-3 align-items-stretch g-4 py-4 text-center">
+
+            <!-- Feature Card 1 -->
+            <div class="col">
+                <div class="feature-card" style="background-image: url('./images/breath.webp');"></div>
+                <div class="feature-content">
+                    <div class="feature-title my-2">100% Safe & Breathable Fog</div>
+                    <div class="feature-description">Our fog is non-toxic, safe to breathe, and enhances the café ambiance.</div>
+                </div>
+            </div>
+
+            <!-- Feature Card 2 -->
+            <div class="col">
+                <div class="feature-card" style="background-image: url('./images/garden2.webp');"></div>
+                <div class="feature-content">
+                    <div class="feature-title my-2">Energy-Efficient & Eco-Friendly</div>
+                    <div class="feature-description">Consumes low power with sustainable materials for an eco-conscious experience.</div>
+                </div>
+            </div>
+
+            <!-- Feature Card 3 -->
+            <div class="col">
+                <div class="feature-card" style="background-image: url('./images/custom.webp');"></div>
+                <div class="feature-content">
+                    <div class="feature-title my-2">Customizable for Branding</div>
+                    <div class="feature-description">Adjust colors and fog patterns to match your brand’s aesthetics.</div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Variants Section -->
+    <div class="container px-4 py-4" id="variants">
+        <h2 class="pb-2 border-bottom">Variants</h2>
+        <div class="row row-cols-1 row-cols-lg-2 align-items-stretch g-4 py-4 text-center">
+
+            <!-- Variant 1: Classic Black -->
+            <div class="col">
+                <div class="text-bg-dark p-4 rounded-4 shadow-sm">
+                    <h3 class="display-6">PUFFER PURE MIST</h3>
+                    <p>Captivating mist for branding and engagement.</p>
+                    <div class="shadow-sm mx-auto"
+                         style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;
+                                background: url('./images/var1.webp') no-repeat center center/cover;">
+                    </div>
+                </div>
+                <p class="variant-description">
+                    Designed for coffee shops and events,this variant creates a captivating floating mist that enhances
+                    customer engagement and adds a unique visual experience. It serves
+                    as a powerful branding tool, customizable to display logos, increasing
+                    brand visibility and social media impact. Ideal for coffee shops, retail
+                    spaces, exhibitions, corporate branding, concerts, and stage
+                    performances, it instantly grabs attention, making spaces more
+                    inviting and memorable.
+                </p>
+            </div>
+
+            <!-- Variant 2: Premium White -->
+            <div class="col">
+                <div class="bg-body-tertiary p-4 rounded-4 shadow-sm">
+                    <h3 class="display-6">AROMA MIST</h3>
+                    <p>Captivating mist for branding and engagement.</p>
+                    <div class="shadow-sm mx-auto"
+                         style="width: 80%; height: 300px; border-radius: 21px 21px 0 0;
+                                background: url('./images/lobby2.webp') no-repeat center center/cover;">
+                    </div>
+                </div>
+                <p class="variant-description">
+                    A sensory and fragrance-infused variant, perfect for
+luxury and sacred spaces. Infused with natural essential oils, it
+enhances the ambiance with calming and refreshing scents.
+Designed for mosques, meditation centers, hotels, and wellness areas,
+it can be fully customized into holy symbols, artistic structures, or
+brand elements, elevating the aesthetic and spiritual experience. Ideal
+for luxury hotel lobbies, spas, theaters, exclusive lounges, and
+meditation spaces.
+                </p>
+            </div>
+
+        </div>
+    </div>
+
+
+
+
+
+    <div class="container px-4 py-4" id="gallery">
+        <h2 class="pb-2 border-bottom">Gallery</h2>
+        <div class="text-center mb-4">
+            <button class="btn btn-outline-dark mx-2" onclick="filterGallery('all')">All</button>
+            <button class="btn btn-outline-dark mx-2" onclick="filterGallery('coffee')">Coffee Models</button>
+            <button class="btn btn-outline-dark mx-2" onclick="filterGallery('garden')">Garden Models</button>
+            <button class="btn btn-outline-dark mx-2" onclick="filterGallery('lobby')">Lobby Models</button>
+            <button class="btn btn-outline-dark mx-2" onclick="filterGallery('public')">Public Models</button>
+        </div>
+        <div class="row g-4 text-center">
+            <!-- All Models (6 Images) -->
+            <div class="col-lg-4 col-md-6 gallery-item all">
+                <img src="./images/coffeeModel3.webp" class="img-fluid rounded-4 shadow-sm" alt="Coffee Model 1">
+            </div>
+            <div class="col-lg-4 col-md-6 gallery-item all">
+                <img src="./images/garden2.webp" class="img-fluid rounded-4 shadow-sm" alt="Garden Model 1">
+            </div>
+            <div class="col-lg-4 col-md-6 gallery-item all">
+                <img src="./images/lobby2.webp" class="img-fluid rounded-4 shadow-sm" alt="Lobby Model 1">
+            </div>
+            <div class="col-lg-4 col-md-6 gallery-item all">
+                <img src="./images/coffee3.webp" class="img-fluid rounded-4 shadow-sm" alt="Coffee Model 2">
+            </div>
+            <div class="col-lg-4 col-md-6 gallery-item all">
+                <img src="./images/spray2.webp" class="img-fluid rounded-4 shadow-sm" alt="Spray Model 2">
+            </div>
+            <div class="col-lg-4 col-md-6 gallery-item all">
+                <img src="./images/lobby1.webp" class="img-fluid rounded-4 shadow-sm" alt="Lobby Model 2">
+            </div>
+    
+            <!-- Coffee Models (6 Images) -->
+            <div class="col-lg-4 col-md-6 gallery-item coffee">
+                <img src="./images/coffeeModel1.webp" class="img-fluid rounded-4 shadow-sm" alt="Coffee Model 1">
+            </div>
+            <div class="col-lg-4 col-md-6 gallery-item coffee">
+                <img src="./images/var1.webp" class="img-fluid rounded-4 shadow-sm" alt="Coffee Model 2">
+            </div>
+            <div class="col-lg-4 col-md-6 gallery-item coffee">
+                <img src="./images/coffeeModel5.jpeg" class="img-fluid rounded-4 shadow-sm" alt="Coffee Model 3">
+            </div>
+            <div class="col-lg-4 col-md-6 gallery-item coffee">
+                <img src="./images/coffeeModel2.webp" class="img-fluid rounded-4 shadow-sm" alt="Coffee Model 3">
+            </div>
+            <div class="col-lg-4 col-md-6 gallery-item coffee">
+                <img src="./images/coffeeModel4.webp" class="img-fluid rounded-4 shadow-sm" alt="Coffee Model 3">
+            </div>
+            <div class="col-lg-4 col-md-6 gallery-item coffee">
+                <img src="./images/coffeeModel6.jpeg" class="img-fluid rounded-4 shadow-sm" alt="Coffee Model 3">
+            </div>
+    
+            <!-- Garden Models (6 Images) -->
+            <div class="col-lg-4 col-md-6 gallery-item garden">
+                <img src="./images/garden1.webp" class="img-fluid rounded-4 shadow-sm" alt="Garden Model 1">
+            </div>
+            <div class="col-lg-4 col-md-6 gallery-item garden">
+                <img src="./images/garden6.webp" class="img-fluid rounded-4 shadow-sm" alt="Garden Model 2">
+            </div>
+            <div class="col-lg-4 col-md-6 gallery-item garden">
+                <img src="./images/garden2.webp" class="img-fluid rounded-4 shadow-sm" alt="Garden Model 3">
+            </div>
+            <div class="col-lg-4 col-md-6 gallery-item garden">
+                <img src="./images/garden7.webp" class="img-fluid rounded-4 shadow-sm" alt="Garden Model 3">
+            </div>
+            <div class="col-lg-4 col-md-6 gallery-item garden">
+                <img src="./images/garden3.webp" class="img-fluid rounded-4 shadow-sm" alt="Garden Model 3">
+            </div>
+            <div class="col-lg-4 col-md-6 gallery-item garden">
+                <img src="./images/garden8.webp" class="img-fluid rounded-4 shadow-sm" alt="Garden Model 3">
+            </div>
+    
+            <!-- Lobby Models (6 Images) -->
+            <div class="col-lg-4 col-md-6 gallery-item lobby">
+                <img src="./images/lobby10.webp" class="img-fluid rounded-4 shadow-sm" alt="Lobby Model 1">
+            </div>
+            <div class="col-lg-4 col-md-6 gallery-item lobby">
+                <img src="./images/lobby 8.webp" class="img-fluid rounded-4 shadow-sm" alt="Lobby Model 2">
+            </div>
+            <div class="col-lg-4 col-md-6 gallery-item lobby">
+                <img src="./images/lobby2.webp" class="img-fluid rounded-4 shadow-sm" alt="Lobby Model 3">
+            </div>
+            <div class="col-lg-4 col-md-6 gallery-item lobby">
+                <img src="./images/lobby9.webp" class="img-fluid rounded-4 shadow-sm" alt="Lobby Model 3">
+            </div>
+            <div class="col-lg-4 col-md-6 gallery-item lobby">
+                <img src="./images/lobby11.webp" class="img-fluid rounded-4 shadow-sm" alt="Lobby Model 3">
+            </div>
+            <div class="col-lg-4 col-md-6 gallery-item lobby">
+                <img src="./images/lobby12.webp" class="img-fluid rounded-4 shadow-sm" alt="Lobby Model 3">
+            </div>
+
+            <div class="col-lg-4 col-md-6 gallery-item public">
+                <img src="./images/public1.jpeg" class="img-fluid rounded-4 shadow-sm" alt="Public Model 1">
+            </div>
+            <div class="col-lg-4 col-md-6 gallery-item public">
+                <img src="./images/public2.webp" class="img-fluid rounded-4 shadow-sm" alt="Public Model 2">
+            </div>
+            <div class="col-lg-4 col-md-6 gallery-item public">
+                <img src="./images/public3.webp" class="img-fluid rounded-4 shadow-sm" alt="Public Model 3">
+            </div>
+            <div class="col-lg-4 col-md-6 gallery-item public">
+                <img src="./images/public4.webp" class="img-fluid rounded-4 shadow-sm" alt="Public Model 3">
+            </div>
+            <div class="col-lg-4 col-md-6 gallery-item public">
+                <img src="./images/coffeepufferhero.webp" class="img-fluid rounded-4 shadow-sm" alt="Public Model 3">
+            </div>
+            <div class="col-lg-4 col-md-6 gallery-item public">
+                <img src="./images/public5.webp" class="img-fluid rounded-4 shadow-sm" alt="Public Model 3">
+            </div>
+        </div>
+        <div class="row g-4 text mt-4" id="demo">
+            <h3 class="pb-2 border-bottom">Video Demonstrations</h3>
+            <div class="col-lg-4 col-md-6">
+                <video controls class="img-fluid rounded-4 shadow-sm w-100">
+                    <source src="./images/video1.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <video controls class="img-fluid rounded-4 shadow-sm w-100">
+                    <source src="./images/video3.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+            <div class="col-lg-4 col-md-6">
+                <video controls class="img-fluid rounded-4 shadow-sm w-100">
+                    <source src="./images/video2.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
+        </div>
+    </div>
+    
+
+
+
+    <div class="container px-4 py-5" id="contact">
+        <h2 class="pb-2 border-bottom">Contact Us</h2>
+        <p class="text-muted">We’d love to hear from you! Drop us a message, and we'll get back to you soon.</p>
+
+        <div class="row g-4 align-items-center">
+            <!-- Contact Info -->
+            <div class="col-lg-5">
+                <div class="p-4 shadow-sm rounded-4 bg-light text-dark">
+                    <h4 class="fw-bold">📍 Our Office</h4>
+                    <p>Al Tallah, Ajman, UAE</p>
+
+                    <h4 class="fw-bold mt-3">📧 Email</h4>
+                    <p>
+                        <a href="mailto:coffeepuffer2@gmail.com" class="text-dark text-decoration-none">
+                            coffeepuffer2@gmail.com
+                        </a>
+                    </p>
+
+                    <h4 class="fw-bold mt-3">📞 Phone</h4>
+                    <p>+971 58 665 5344</p>
+                </div>
+            </div>
+
+            <!-- Contact Form -->
+            <div class="col-lg-7">
+                <div class="p-4 shadow-sm rounded-4 bg-white">
+                    <h4 class="fw-bold text-center">📩 Send Us a Message</h4>
+                    <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSffII8a7ePSv53zApFETSVjXDcxjLXexOFDoh-0XyuxBM0dpw/viewform?embedded=true" width="640" height="800" frameborder="0" marginheight="0" marginwidth="0">Loading…</iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container">
+        <footer class="py-3 my-4">
+            <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+                <li class="nav-item"><a href="#home" class="nav-link px-2 text-body-secondary">Home</a></li>
+                <li class="nav-item"><a href="#features" class="nav-link px-2 text-body-secondary">Features</a></li>
+                <li class="nav-item"><a href="#variants" class="nav-link px-2 text-body-secondary">Variants</a></li>
+                <li class="nav-item"><a href="#gallery" class="nav-link px-2 text-body-secondary">Gallery</a></li>
+                <li class="nav-item"><a href="#demo" class="nav-link px-2 text-body-secondary">Demo</a></li>
+                <li class="nav-item"><a href="#contact" class="nav-link px-2 text-body-secondary">Contact</a></li>
+            </ul>
+            <p class="text-center text-body-secondary">© <span id="year"></span> PUFFER</p>
+        </footer>
+    </div>
+    
+    <script>
+        // JavaScript to set the current year dynamically
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+
+<script>
+    function filterGallery(category) {
+        const items = document.querySelectorAll('.gallery-item');
+        if (category === 'all') {
+            items.forEach((item, index) => {
+                if (index < 6) {
+                    item.style.display = 'block';
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+        } else {
+            items.forEach(item => item.style.display = item.classList.contains(category) ? 'block' : 'none');
+        }
+    }
+    filterGallery('all');
+</script>
+
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
