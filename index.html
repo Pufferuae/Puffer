@@ -100,30 +100,171 @@
                 height: 600px !important;
             }
         }
+
+        /* Modern font */
+body {
+    background-color: #f8f9fa;
+}
+
+/* Navbar aesthetic */
+.navbar {
+    background-color: #ffffff !important;
+    box-shadow: 0 2px 8px 
+}
+
+.navbar-nav .nav-link {
+    font-weight: 500;
+    margin: 0 8px;
+    color: #333 !important;
+    transition: all 0.3s ease-in-out;
+}
+.navbar-nav .nav-link:hover {
+    color: #007bff !important;
+}
+
+.navbar {
+    background-color: rgba(255, 255, 255, 0.1); /* or 0.0 for fully transparent */
+    backdrop-filter: blur(10px); /* Adds a soft blur behind the navbar */
+    -webkit-backdrop-filter: blur(10px);
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional: subtle shadow */
+}
+
+
+/* Hero text glow */
+#home h1 {
+    text-shadow: 0px 4px 20px rgba(255,255,255,0.3);
+}
+#home h3 {
+    text-shadow: 0px 2px 10px rgba(255,255,255,0.2);
+}
+
+/* Section headers */
+h2 {
+    color: #222;
+}
+
+/* Feature/Variant transitions */
+.feature-card, .gallery-item img {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.feature-card:hover, .gallery-item img:hover {
+    transform: scale(1.02);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+}
+
+/* Buttons */
+button.btn {
+    transition: all 0.3s ease-in-out;
+}
+button.btn:hover {
+    background-color: #000;
+    color: #fff;
+}
+
+/* Variant cards */
+.text-bg-dark, .bg-body-tertiary {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.text-bg-dark:hover, .bg-body-tertiary:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Gallery filter buttons active style (optional JavaScript toggle) */
+button.btn.active-filter {
+    background-color: #000;
+    color: #fff;
+    border-color: #000;
+}
+
+/* ✅ Base Transparent Navbar */
+.navbar {
+    background-color: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    z-index: 999;
+}
+
+/* ✅ Solid Navbar on Scroll */
+.navbar.scrolled {
+    background-color: rgba(255, 255, 255, 0.95);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+/* ✅ Navbar Links */
+.navbar-nav .nav-link {
+    font-weight: 500;
+    margin: 0 8px;
+    color: #333 !important;
+    transition: color 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #007bff !important;
+}
+
+/* ✅ Logo Adjustments */
+.navbar-brand img {
+    height: 40px;
+    filter: brightness(1.2);
+    transition: filter 0.3s ease;
+}
+
+/* ✅ When Navbar is Solid, dim logo slightly */
+.navbar.scrolled .navbar-brand img {
+    filter: brightness(1);
+}
+
+/* ✅ Mobile Menu */
+.navbar-toggler {
+    border: none;
+    outline: none;
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba%280,0,0,0.6%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+
+/* Optional: Dark Mode (if needed) */
+body.dark-mode .navbar,
+.navbar.dark {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+body.dark-mode .navbar-nav .nav-link {
+    color: #f0f0f0 !important;
+}
+
+
     </style>
 </head>
 <body>
 
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg bg-body-tertiary">
-        <div class="container-fluid" id>
-            <a class="navbar-brand" href="#">PUFFER</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
-                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#variants">Variants</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#demo">Demo</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                </ul>
-            </div>
+    <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">PUFFER</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                  data-bs-target="#navbarSupportedContent"
+                  aria-controls="navbarSupportedContent" aria-expanded="false"
+                  aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+              <li class="nav-item"><a class="nav-link active" href="#home">Home</a></li>
+              <li class="nav-item"><a class="nav-link" href="#features">Features</a></li>
+              <li class="nav-item"><a class="nav-link" href="#variants">Variants</a></li>
+              <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+              <li class="nav-item"><a class="nav-link" href="#demo">Demo</a></li>
+              <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+            </ul>
+          </div>
         </div>
-    </nav>
+      </nav>
+      
 
     <!-- Hero Section -->
     <div class="position-relative overflow-hidden d-flex align-items-center justify-content-center text-center vh-100" 
@@ -243,7 +384,7 @@ meditation spaces.
                 <img src="./images/garden2.webp" class="img-fluid rounded-4 shadow-sm" alt="Garden Model 1">
             </div>
             <div class="col-lg-4 col-md-6 gallery-item all">
-                <img src="./images/lobby2.webp" class="img-fluid rounded-4 shadow-sm" alt="Lobby Model 1">
+                <img src="./images/coffee2.webp" class="img-fluid rounded-4 shadow-sm" alt="Lobby Model 1">
             </div>
             <div class="col-lg-4 col-md-6 gallery-item all">
                 <img src="./images/coffee3.webp" class="img-fluid rounded-4 shadow-sm" alt="Coffee Model 2">
@@ -263,10 +404,10 @@ meditation spaces.
                 <img src="./images/var1.webp" class="img-fluid rounded-4 shadow-sm" alt="Coffee Model 2">
             </div>
             <div class="col-lg-4 col-md-6 gallery-item coffee">
-                <img src="./images/coffeeModel5.jpeg" class="img-fluid rounded-4 shadow-sm" alt="Coffee Model 3">
+                <img src="./images/coffee3.webp" class="img-fluid rounded-4 shadow-sm" alt="Coffee Model 3">
             </div>
             <div class="col-lg-4 col-md-6 gallery-item coffee">
-                <img src="./images/coffeeModel2.webp" class="img-fluid rounded-4 shadow-sm" alt="Coffee Model 3">
+                <img src="./images/cp2.webp" class="img-fluid rounded-4 shadow-sm" alt="Coffee Model 3">
             </div>
             <div class="col-lg-4 col-md-6 gallery-item coffee">
                 <img src="./images/coffeeModel4.webp" class="img-fluid rounded-4 shadow-sm" alt="Coffee Model 3">
@@ -429,25 +570,42 @@ meditation spaces.
     <script>
         // JavaScript to set the current year dynamically
         document.getElementById("year").textContent = new Date().getFullYear();
+        window.onload = function() {
+            filterGallery('all');}
     </script>
 
 <script>
     function filterGallery(category) {
-        const items = document.querySelectorAll('.gallery-item');
-        if (category === 'all') {
-            items.forEach((item, index) => {
-                if (index < 6) {
-                    item.style.display = 'block';
-                } else {
-                    item.style.display = 'none';
-                }
-            });
-        } else {
-            items.forEach(item => item.style.display = item.classList.contains(category) ? 'block' : 'none');
-        }
+    const items = document.querySelectorAll('.gallery-item');
+
+    if (category === 'all') {
+        // Show only the first 6 items
+        items.forEach((item, index) => {
+            item.style.display = index < 6 ? 'block' : 'none';
+        });
+    } else {
+        // Show all items that match the category
+        let visibleCount = 0;
+        items.forEach(item => {
+            if (item.classList.contains(category)) {
+                item.style.display = 'block';
+                visibleCount++;
+            } else {
+                item.style.display = 'none';
+            }
+        });
     }
-    filterGallery('all');
+
+    // Update active button state
+    const buttons = document.querySelectorAll('#gallery button');
+    buttons.forEach(btn => btn.classList.remove('active-filter'));
+    event.target.classList.add('active-filter');
+}
+
 </script>
+
+
+
 
 
     
